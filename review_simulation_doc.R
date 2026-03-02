@@ -217,17 +217,11 @@ for (i in 1:100) {
 
 # Calculate statistics for each scenario
 
-# Helper function: standard error of the mean (SEM)
-sem <- function(x) {
-  sd(x) / sqrt(length(x))
-}
-
 # Helper function to compute summary statistics
 summarize_estimates <- function(est_df) {
   c(
     mean_beta0 = mean(exp(est_df$beta0)),
-    mean_beta1 = mean(exp(est_df$beta1)),
-    sem_beta1  = sem(exp(est_df$beta1))
+    mean_beta1 = mean(exp(est_df$beta1))
   )
 }
 
@@ -240,7 +234,7 @@ results <- data.frame(
   "Conditional Ignorability Collider" = summarize_estimates(estimates_cond_ignor_col)
 )
 
-rownames(results) <- c("Mean beta0", "Mean beta1", "SEM beta1")
+rownames(results) <- c("Mean beta0", "Mean beta1")
 
 # View results
 print(results)

@@ -85,7 +85,6 @@ For each scenario, the script reports:
 
 - Estimated baseline mean expression
 - Estimated treatment fold change
-- Monte Carlo standard error of the fold change
 
 ---
 
